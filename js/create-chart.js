@@ -4,16 +4,16 @@ const pointScale = 3;
 const signSpace = 9;
 const pointRadius = 1.5;
 
-const backgroundColor = "white";
-const axisesColor = "black";
-const regionColor = "royalblue";
+const backgroundColor = "#040001";
+const axisesColor = "darkred";
+const regionColor = "red";
 const signsColor = axisesColor;
-const pointColor = "red";
+const pointColor = "blue";
 
 const signsFont = "14px monospace";
 
 {
-    let canvas = document.getElementById("task-chart");
+    let canvas = document.getElementById("chart-canvas");
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 

@@ -2,16 +2,21 @@
 
 $workTime = microtime(true);
 
-if (!valuesPresented()) {
+/*if (!valuesPresented()) {
     include 'templates/empty-result.html';
     return;
-}
+}*/
 
 $X = $_GET["X"];
 $Y = $_GET["Y"];
 $R = $_GET["R"];
 
-if (!(checkX($X) && checkY($Y) && checkR($R))) {
+$dochtml = new DOMDocument();
+$dochtml -> loadHTMLFile('index.html');
+$elm = $dochtml -> getElementById('prev-X');
+$elm->textContent = 'test';
+
+/*if (!(checkX($X) && checkY($Y) && checkR($R))) {
     include_once 'templates/empty-result.html';
     return;
 }
@@ -43,6 +48,6 @@ function checkY($Y) {
 
 function checkR($R) {
     return (($R == ((string)(int)$R)) && strlen($R) <=10 && $R >= 1 && $R <= 5);
-}
+}*/
 
 ?>
