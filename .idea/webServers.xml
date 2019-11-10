@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="51c4a3c1-ff74-427d-b5e8-cd29a2256e2c" name="LabsServer" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs" accessType="MOUNT" />
+      </webServer>
+      <webServer id="6a8573af-0c9e-4e2d-b777-1b3bc720df27" name="Home router" url="http://gosvoh.duckdns.org">
+        <fileTransfer host="gosvoh.duckdns.org" port="2222" rootFolder="/home/admin/website/Web" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

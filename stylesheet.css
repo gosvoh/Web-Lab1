@@ -1,0 +1,148 @@
+/*
+     Пример наследования
+Для всех наследуемых элементов документа
+устанавливаем шрифт sans-serif и белый цвет текста */
+body {
+    background: no-repeat center/cover url("img/bg.jpg") fixed #040001;
+    font-family: sans-serif;
+    color: white;
+}
+
+/*   Селектор дочерних элементов   */
+div > h1 {
+    margin: 20px auto;
+}
+
+/*   Селектор класса   */
+.container {
+    background: transparent;
+    text-align: center;
+    align-items: center;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+#header-container {
+    width: 1600px;
+    height: 50px;
+    display: flex;
+    font-weight: bold;
+    margin: 30px auto;
+}
+
+.header-element {
+    flex: 1;
+}
+
+.header-element-left {
+    justify-content: flex-start;
+}
+
+.header-element-center {
+    justify-content: center;
+}
+
+.header-element-right {
+    justify-content: flex-end;
+}
+
+#workspace-container {
+    width: 1600px;
+    display: flex;
+    margin: auto auto 30px;
+}
+
+.workspace-element {
+    width: 750px;
+    height: 550px;
+}
+
+#calculation-form {
+    height: 350px;
+}
+
+.parameter {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+#X-radio {
+    margin: auto;
+    padding-right: 20px;
+}
+
+#R-radio {
+    margin: auto;
+}
+
+#Y-text {
+    margin-left: auto;
+    margin-right: 30px;
+    height: 30px;
+    width: 600px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.parameter-label {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/*   Каскадирование !important   */
+#warning-message-Y {
+    visibility: hidden;
+    color: red !important;
+}
+
+#chart-container {
+    margin-left: auto;
+}
+
+#chart-canvas {
+    width: 350px;
+    height: 350px;
+    background: red;
+}
+
+#submit-button {
+    background: #3d4042;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/*   Селектор псевдокласса hover   */
+#submit-button:hover {
+    border: 1px solid white;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#submit-button:active {
+    background: darkgrey;
+    transition: 0s;
+}
+
+#meta-container {
+    width: 1600px;
+    height: 250px;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+tr, td {
+    width: 400px;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+/*   Селектор потомств   */
+div table {
+    padding: 0 30px;
+}
