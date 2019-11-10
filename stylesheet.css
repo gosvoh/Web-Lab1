@@ -1,6 +1,5 @@
-/*
-     Пример наследования
-Для всех наследуемых элементов документа
+/*  Пример наследования   */
+/* Для всех наследуемых элементов документа
 устанавливаем шрифт sans-serif и белый цвет текста */
 body {
     background: no-repeat center/cover url("img/bg.jpg") fixed #040001;
@@ -103,7 +102,7 @@ div > h1 {
 #chart-canvas {
     width: 350px;
     height: 350px;
-    background: red;
+    border: 2px solid red;
 }
 
 #submit-button {
