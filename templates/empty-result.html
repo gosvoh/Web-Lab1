@@ -1,18 +1,37 @@
 <!DOCTYPE html>
+<!--suppress HtmlRequiredTitleElement -->
 <html lang="ru">
 <head>
     <meta charset='utf-8'/>
-    <style>
-        .empty-result{
-            display: block;
-            font-family: monospace;
-            color: white;
-            font-size: 20px;
-            margin: 0px 10px 10px 10px;
-        }
-    </style>
 </head>
 <body>
-<span class='empty-result'>Чтобы получить результат, введите необходимые параметры в форме выше</span>
+<table>
+    <tr>
+        <td>Значение Х</td>
+        <td id="prev-X">Нет данных</td>
+    </tr>
+    <tr>
+        <td>Значение Y</td>
+        <td id="prev-Y">Нет данных</td>
+    </tr>
+    <tr>
+        <td>Значение R</td>
+        <td id="prev-R">Нет данных</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Попадание</td>
+        <td id="result-hit">Нет данных</td>
+    </tr>
+    <tr>
+        <td>Текущее время</td>
+        <td id="current-time"></td>
+    </tr>
+    <tr>
+        <td>Время работы скрипта</td>
+        <td id="result-work-time">Нет данных</td>
+    </tr>
+</table>
 </body>
 </html>

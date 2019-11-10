@@ -50,7 +50,8 @@
             </div>
             <div id="Y-parameter" class="parameter">
                 <label for="Y-text" class="parameter-label">Y:</label>
-                <input id="Y-text" type="text" name="Y-parameter" placeholder="[-5 ... 3]" autocomplete="off" required maxlength="10">
+                <input id="Y-text" type="text" name="Y-parameter" placeholder="[-5 ... 3]" autocomplete="off" required
+                       maxlength="10">
             </div>
             <label id="warning-message-Y">Warning message</label>
             <div id="R-parameter" class="parameter">
@@ -79,41 +80,11 @@
     <div id="chart-container" class="workspace-element container">
         <h1>Область</h1>
         <canvas id="chart-canvas"></canvas>
-        <p>Входит/нет</p>
-        <p>Введите данные</p>
     </div>
 </div>
 <div id="meta-container" class="container">
-    <table>
-        <tr>
-            <td>Значение Х</td>
-            <td id="prev-X"></td>
-        </tr>
-        <tr>
-            <td>Значение Y</td>
-            <td id="prev-Y"></td>
-        </tr>
-        <tr>
-            <td>Значение R</td>
-            <td id="prev-R"></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>Попадание</td>
-            <td id="result-hit"></td>
-        </tr>
-        <tr>
-            <td>Текущее время</td>
-            <td id="current-time"><script>Date.now().toString();</script></td>
-        </tr>
-        <tr>
-            <td>Время работы скрипта</td>
-            <td id="result-work-time"></td>
-        </tr>
-    </table>
+    <?php include 'check.php' ?>
 </div>
-
 <script src="js/validation.js"></script>
 <script src="js/init.js"></script>
 </body>
