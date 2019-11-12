@@ -84,6 +84,7 @@
 <div id="meta-container" class="container">
     <?php include 'check.php' ?>
 </div>
+<script src="js/create-chart.js"></script>
 <script src="js/validation.js"></script>
 <script src="js/init.js"></script>
 </body>
