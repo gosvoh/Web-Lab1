@@ -2,7 +2,8 @@
 /* Для всех наследуемых элементов документа
 устанавливаем шрифт sans-serif и белый цвет текста */
 body {
-    background: no-repeat center/cover url("img/bg.jpg") fixed #040001;
+    background: url("img/bg.jpg") no-repeat center center fixed #040001;
+    background-size: cover;
     font-family: sans-serif;
     color: white;
 }
