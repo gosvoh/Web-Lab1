@@ -3,7 +3,7 @@
 устанавливаем шрифт sans-serif и белый цвет текста */
 body {
     background: url("img/bg.jpg") no-repeat center center fixed #040001;
-    background-size: cover
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

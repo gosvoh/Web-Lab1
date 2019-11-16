@@ -5,10 +5,10 @@ const signSpace = 9;
 const pointRadius = 1.5;
 
 const backgroundColor = "#040001";
-const axisesColor = "darkred";
+const axisesColor = "white";
 const regionColor = "red";
 const signsColor = axisesColor;
-const pointColor = "blue";
+const pointColor = "royalblue";
 
 const signsFont = "14px monospace";
 
@@ -22,9 +22,9 @@ const signsFont = "14px monospace";
     drawAxises(canvas);
     drawAxisesSigns(canvas);
     if (document.getElementById("result-table") != null) {
-        let r = document.getElementById("result-r").innerText;
-        let x = canvas.width / 2 + document.getElementById("result-x").innerText * canvas.width * 0.4 / r;
-        let y = canvas.height / 2 + -document.getElementById("result-y").innerText * canvas.height * 0.4 / r;
+        let r = document.getElementById("prev-R").innerText;
+        let x = canvas.width / 2 + document.getElementById("prev-X").innerText * canvas.width * 0.4 / r;
+        let y = canvas.height / 2 + -document.getElementById("prev-Y").innerText * canvas.height * 0.4 / r;
         drawPointsSigns(canvas, r);
         drawPoint(canvas, x, y);
     } else {
@@ -151,6 +151,9 @@ function drawPoint(canvas, x, y) {
     context.beginPath();
     context.strokeStyle = pointColor;
     context.fillStyle = pointColor;
+    /* For glowing effect */
+    context.shadowColor = "white";
+    context.shadowBlur = 10;
 
     context.arc(x, y, pointRadius, 0, 2 * Math.PI);
     context.closePath();
