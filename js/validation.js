@@ -5,7 +5,7 @@ function validate(form) {
     let Y = form.Y.value;
     let valid = false;
 
-    if (validateParam(Y, "Y")) {
+    if (validateParam(Y, "Y-parameter")) {
         valid = true;
     }
 

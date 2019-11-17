@@ -2,7 +2,7 @@ const arrowLength = 7;
 const lineWidth = 2;
 const pointScale = 3;
 const signSpace = 9;
-const pointRadius = 1.5;
+const pointRadius = 2.5;
 
 const backgroundColor = "#040001";
 const axisesColor = "white";
@@ -10,12 +10,24 @@ const regionColor = "red";
 const signsColor = axisesColor;
 const pointColor = "royalblue";
 
-const signsFont = "14px monospace";
+const signsFont = "1vw monospace";
 
 {
     let canvas = document.getElementById("chart-canvas");
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    let cs = getComputedStyle(canvas);
+    canvas.width = parseInt(cs.getPropertyValue('width'), 10);
+    canvas.height = parseInt(cs.getPropertyValue('height'), 10);
+
+    /*let ratio = 2;
+    let oldWidth = canvas.width;
+    let oldHeight = canvas.height;
+    canvas.width = oldWidth * ratio;
+    canvas.height = oldHeight * ratio;
+
+
+
+    let context = canvas.getContext('2d');
+    context.scale(ratio, ratio);*/
 
     drawBackground(canvas);
     drawArea(canvas);
@@ -43,6 +55,8 @@ function drawArea(canvas) {
     let context = canvas.getContext("2d");
     context.strokeStyle = regionColor;
     context.fillStyle = regionColor;
+    context.imageSmoothingEnabled = true;
+    context.imageSmoothingQuality = 'high';
 
     context.beginPath();
 
@@ -68,6 +82,8 @@ function drawArea(canvas) {
 
 function drawAxises(canvas) {
     let context = canvas.getContext("2d");
+    context.imageSmoothingEnabled = true;
+    context.imageSmoothingQuality = 'high';
 
     context.beginPath();
     context.strokeStyle = axisesColor;
@@ -117,6 +133,8 @@ function drawAxises(canvas) {
 
 function drawAxisesSigns(canvas) {
     let context = canvas.getContext("2d");
+    context.imageSmoothingEnabled = true;
+    context.imageSmoothingQuality = 'high';
     context.font = signsFont;
     context.fillStyle = signsColor;
 
@@ -127,6 +145,7 @@ function drawAxisesSigns(canvas) {
 function drawPointsSigns(canvas, r) {
     let context = canvas.getContext("2d");
     context.font = signsFont;
+    context.offsetX = 5;
     context.fillStyle = signsColor;
 
     let rIsNumber = !isNaN(Number(r));

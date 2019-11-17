@@ -9,28 +9,32 @@ body {
     -o-background-size: cover;
     font-family: sans-serif;
     color: white;
+    font-size: 1vw;
+    margin: auto;
 }
 
 /*   Селектор дочерних элементов   */
 div > h1 {
-    margin: 20px auto;
+    margin: auto auto 1vw;
+    font-size: 2.5vw;
 }
 
 /*   Селектор класса   */
-.container {
-    background: transparent;
+.big-container {
+    width: 90%;
+    display: flex;
     text-align: center;
     align-items: center;
-    border: 2px solid red;
-    border-radius: 10px;
+    justify-content: center;
+    border: 0.1vw solid red;
+    border-radius: 0.7vw;
+    background: transparent;
 }
 
 #header-container {
-    width: 1600px;
-    height: 50px;
-    display: flex;
+    height: 2.5vw;
     font-weight: bold;
-    margin: 30px auto;
+    margin: 1.5vw auto;
 }
 
 .header-element {
@@ -50,29 +54,40 @@ div > h1 {
 }
 
 #workspace-container {
-    width: 1600px;
-    display: flex;
-    margin: auto auto 30px;
+    margin: auto auto 1.5vw;
 }
 
 .workspace-element {
-    width: 750px;
-    height: 550px;
-}
-
-#calculation-form {
-    height: 350px;
+    width: 100%;
+    height: 22.5vw;
+    margin: 1.5vw;
+    border: 0.1vw solid red;
+    border-radius: 0.7vw;
+    padding: 2vw;
 }
 
 .parameter {
     display: flex;
     align-items: center;
-    padding: 25px;
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+input[type=radio] {
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+    margin: 0.2vw;
+}
+
+/*   Селектор всех соседних элементов того же уровня   */
+input[type=radio] ~ label {
+    cursor: pointer;
 }
 
 #X-radio {
     margin: auto;
-    padding-right: 20px;
+    padding-right: 2vw;
 }
 
 #R-radio {
@@ -81,15 +96,15 @@ div > h1 {
 
 #Y-text {
     margin-left: auto;
-    margin-right: 30px;
-    height: 30px;
-    width: 600px;
+    margin-right: 3vw;
+    height: 2vw;
+    width: 70%;
     text-align: center;
-    font-size: 24px;
+    font-size: 2vw;
 }
 
 .parameter-label {
-    font-size: 50px;
+    font-size: 2vw;
     font-weight: bold;
 }
 
@@ -99,28 +114,29 @@ div > h1 {
     color: red !important;
 }
 
-#chart-container {
+/*#chart-container {
     margin-left: auto;
-}
+}*/
 
 #chart-canvas {
-    width: 350px;
-    height: 350px;
-    border: 2px solid red;
+    width: 17.5vw;
+    height: 17.5vw;
+    border: 0.1vw solid red;
 }
 
 #submit-button {
     background: #3d4042;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border: 0.1vw solid transparent;
+    border-radius: 0.7vw;
+    padding: 1vw 2vw;
     cursor: pointer;
     color: white;
+    font-size: 1vw;
 }
 
 /*   Селектор псевдокласса hover   */
 #submit-button:hover {
-    border: 1px solid white;
+    border: 0.1vw solid white;
     transition: 0.1s;
     cursor: pointer;
 }
@@ -131,21 +147,25 @@ div > h1 {
 }
 
 #meta-container {
-    width: 1600px;
-    height: 250px;
+    height: 12.5vw;
     margin: auto;
-    display: flex;
     align-content: center;
     justify-content: center;
 }
 
 tr, td {
-    width: 400px;
-    border: 1px solid red;
-    padding: 10px;
+    font-size: 1vw;
+    width: 17.5vw;
+    border: 0.1vw solid red;
+    padding: 0.7vw;
 }
 
 /*   Селектор потомств   */
 div table {
-    padding: 0 30px;
+    padding: 0 2vw;
+    border-spacing: 0.2vw;
+}
+
+#current-time {
+    font-size: 0.8vw;
 }

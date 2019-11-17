@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Web-программирование, лабораторная работа №1</title>
     <link href="img/favicon.ico" rel="icon">
     <link href="stylesheet.css" rel="stylesheet">
 </head>
 <body>
-<div id="header-container" class="container">
+<div id="header-container" class="big-container">
     <span class="header-element-left header-element">Вохмин Алексей Валерьевич</span>
     <span class="header-element-center header-element">Вариант №211005</span>
     <span class="header-element-right header-element">Группа раздолбаев</span>
 </div>
-<div id="workspace-container">
-    <div id="parameters-container" class="workspace-element container">
+<div id="workspace-container" class="big-container">
+    <div id="parameters-container" class="workspace-element">
         <h1>Параметры</h1>
         <form id="calculation-form" onsubmit="return validate(this);">
             <div id="X-parameter" class="parameter">
@@ -72,20 +73,19 @@
                     <label for="R_3">3</label>
                 </div>
             </div>
-            <p>Введите данные</p>
             <button id="submit-button" type="submit">Отправить</button>
         </form>
     </div>
-    <div id="chart-container" class="workspace-element container">
+    <div id="chart-container" class="workspace-element">
         <h1>Область</h1>
-        <canvas id="chart-canvas"></canvas>
+        <canvas id="chart-canvas">This text is displayed if your browser does not support HTML Canvas.</canvas>
     </div>
 </div>
-<div id="meta-container" class="container">
+<div id="meta-container" class="big-container">
     <?php include 'check.php' ?>
 </div>
-<script src="js/create-chart.js"></script>
-<script src="js/validation.js"></script>
 <script src="js/init.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/create-chart.js"></script>
 </body>
 </html>
