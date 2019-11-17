@@ -2,10 +2,10 @@ const borders = [];
 borders["Y"] = ["-5", "3"];
 
 function validate(form) {
-    let Y = form.Y.value;
+    let Y = form.Y_parameter.value;
     let valid = false;
 
-    if (validateParam(Y, "Y-parameter")) {
+    if (validateParam(Y, "Y")) {
         valid = true;
     }
 
